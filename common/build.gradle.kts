@@ -69,10 +69,12 @@ dependencies {
     // will not yet have an opportunity to apply transformations.
     configurationPreLaunch("org.lwjgl:lwjgl:3.3.3")
     configurationPreLaunch("org.lwjgl:lwjgl-opengl:3.3.3")
+    configurationPreLaunch("org.lwjgl:lwjgl-glfw:3.3.3")
     configurationPreLaunch("net.java.dev.jna:jna:5.14.0")
     configurationPreLaunch("net.java.dev.jna:jna-platform:5.14.0")
     configurationPreLaunch("org.slf4j:slf4j-api:2.0.9")
     configurationPreLaunch("org.jetbrains:annotations:25.0.0")
+    configurationPreLaunch("org.ow2.asm:asm:9.7")
 }
 
 loom {
