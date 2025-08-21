@@ -90,9 +90,14 @@ public class PostLaunchChecks {
         }
 
         String glVer = GL11.glGetString(GL11.GL_VERSION);
-        if(glVer != null && glVer.toLowerCase().contains("openltw")) {
-            LOGGER.warn("Detected LTW renderer in OpenGL version string: {}", glVer);
-            return true;
+        if(glVer != null) {
+            if(glVer.toLowerCase().contains("openltw")) {
+                LOGGER.warn("Detected LTW renderer in OpenGL version string: {}", glVer);
+                return true;
+            } else if(glVer.toLowerCase().contains("mobileglues")) {
+                LOGGER.warn("Detected MobileGlues renderer in OpenGL version string: {}", glVer);
+                return true;
+            }
         }
 
         return false;
